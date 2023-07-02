@@ -1,3 +1,4 @@
+"use client"
 import Filters from "./home/filters"
 import Cards from "./home/cards"
 import React, { useState } from 'react';
