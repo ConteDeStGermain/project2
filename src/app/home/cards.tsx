@@ -3,7 +3,7 @@ import Image from "next/image"
 import cofeeshop from "../../images/coffeeshop.jpg"
 import { Modal } from "./modal"
 import { useState, useContext } from "react"
-import { CheckboxContext } from '../page';
+import { CheckboxContext } from "../CheckboxContext";
 
 
 const displayEmojis = (type: string, value: string | string[]): string => {

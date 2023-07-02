@@ -1,6 +1,7 @@
 import Filters from "./home/filters"
 import Cards from "./home/cards"
 import React, { useState } from 'react';
+import { CheckboxContext } from "./CheckboxContext";
 
 interface CheckboxContextType {
   checkboxState: {
@@ -8,9 +9,6 @@ interface CheckboxContextType {
   };
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
-
-export const CheckboxContext = React.createContext<CheckboxContextType | undefined>(undefined);
-
 
 export default function Home() {
   const [checkboxState, setCheckboxState] = useState<CheckboxContextType['checkboxState']>({

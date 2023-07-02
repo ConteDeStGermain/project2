@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { CheckboxContext } from '../page';
+import { CheckboxContext } from "../CheckboxContext";
 
 export default function Filters() {
   const context = useContext(CheckboxContext);
