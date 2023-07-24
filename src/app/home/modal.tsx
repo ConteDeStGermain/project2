@@ -39,7 +39,9 @@ export const Modal: FC<ModalProps> = ({ id, title, rating, price, amenities, isO
               <span aria-label={`Amenities: ${amenities}`}>{amenities}</span>
               <span className="text-green-500" aria-label={`Price range: ${price}`}>{price}</span>
             </div>
-            <span className="text-black/40">View on google maps</span>
+            <a onClick={(e) => e.stopPropagation()} rel="noopener noreferrer"  target="_blank" href="https://www.google.com/maps/place/Little+Victories+Coffee+Roasters+-+Elgin/@45.4232453,-75.6980091,17z/data=!3m1!4b1!4m6!3m5!1s0x4cce05001e1826db:0x6610cbf50439658c!8m2!3d45.4232453!4d-75.6954342!16s%2Fg%2F11rc77yrqd?entry=ttu">
+              <span className="text-black/40">View on google maps</span>
+            </a>
           </div>
         </div>
       </div>
