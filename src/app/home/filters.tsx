@@ -32,19 +32,19 @@ export default function Filters() {
         </div>
       </div>
       <div className='text-lg'>
-        <h1 className='font-bold text-2xl'>Rating</h1>
+        <h1 className='font-bold text-2xl'>{translations.rating}</h1>
         <div role="group" aria-labelledby="rating">
           <div>
             <input type="checkbox" id="poor" name="rating" value="poor" className="h-5 w-5 mr-2" checked={checkboxState.poor} onChange={handleInputChange} aria-label="Poor Rating" />
-            <label htmlFor="poor">Poor ⭐️</label>
+            <label htmlFor="poor">{translations.poor} ⭐️</label>
           </div>
           <div>
             <input type="checkbox" id="good" name="rating" value="good" className="h-5 w-5 mr-2" checked={checkboxState.good} onChange={handleInputChange} aria-label="Good Rating" />
-            <label htmlFor="good">Good ⭐️⭐️</label>
+            <label htmlFor="good">{translations.good} ⭐️⭐️</label>
           </div>
           <div>
             <input type="checkbox" id="amazing" name="rating" value="amazing" className="h-5 w-5 mr-2" checked={checkboxState.amazing} onChange={handleInputChange} aria-label="Amazing Rating" />
-            <label htmlFor="amazing">Amazing ⭐️⭐️⭐️</label>
+            <label htmlFor="amazing">{translations.amazing} ⭐️⭐️⭐️</label>
           </div>
         </div>
       </div>

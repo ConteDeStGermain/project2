@@ -63,7 +63,7 @@ const LocaleContext = createContext([
   (locale: string) => {},
 ]);
 
-export const LocaleProvider = ({ children }) => {
+export const LocaleProvider = ({ children }: any) => {
   const [locale, setLocale] = useState(defaultLocale);
   
   const switchLanguage = (newLocale: string) => {
