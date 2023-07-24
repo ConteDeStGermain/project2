@@ -2,7 +2,8 @@
 import Filters from "./home/filters"
 import Cards from "./home/cards"
 import React, { useState } from 'react';
-import { CheckboxContext } from "./CheckboxContext";
+import { CheckboxContext } from "./contexts/CheckboxContext";
+import { LocaleProvider } from "./contexts/LocaleContext";
 
 interface CheckboxContextType {
   checkboxState: {
@@ -10,6 +11,7 @@ interface CheckboxContextType {
   };
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
 
 export default function Home() {
   const [checkboxState, setCheckboxState] = useState<CheckboxContextType['checkboxState']>({
@@ -36,13 +38,15 @@ export default function Home() {
   };
 
   return (
-    <CheckboxContext.Provider value={{ checkboxState, handleInputChange }}>
-      <main className="min-h-screen flex-col p-12">
-        <div className='flex flex-row'>
-          <Filters />
-          <Cards />
-        </div>
-      </main>
-    </CheckboxContext.Provider>
+    <LocaleProvider>
+      <CheckboxContext.Provider value={{ checkboxState, handleInputChange }}>
+        <main className="min-h-screen flex-col p-12">
+          <div className='flex flex-row'>
+            <Filters />
+            <Cards />
+          </div>
+        </main>
+      </CheckboxContext.Provider>
+    </LocaleProvider>
   )
 }
