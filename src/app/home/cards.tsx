@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client"
 import Image from "next/image"
 import cofeeshop from "../../images/coffeeshop.jpg"
@@ -46,8 +47,6 @@ export default function Cards() {
     throw new Error("Filters must be used within a CheckboxProvider");
   }
   const { checkboxState, handleInputChange } = context;
-
-// @ts-nocheck
 
   const coffeeShops = [
     {
