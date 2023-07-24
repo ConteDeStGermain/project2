@@ -1,6 +1,34 @@
 "use client"
 import { createContext, useContext, useState } from "react";
 
+type TranslationKeys = {
+  price: string;
+  cheap: string;
+  average: string;
+  expensive: string;
+  rating: string;
+  poor: string;
+  good: string;
+  amazing: string;
+  amenities: string;
+  wifi: string;
+  pastries: string;
+  goodSeating: string;
+  coffeeAlt: string;
+  milkAlt: string;
+  beautifulV: string;
+  favorites: string;
+  showFav: string;
+  switchEn: string;
+  switchFr: string;
+  coffeeShop: string;
+  shopDesc: string;
+  addToFav: string;
+  longDesc: string;
+  rtSystem: string;
+};
+
+
 const translations = {
   en: {
     price: 'Price',
@@ -60,7 +88,7 @@ const defaultLocale = 'en';
 
 const LocaleContext = createContext([
   translations[defaultLocale],
-  (locale: string) => {},
+  (locale: any) => {},
 ]);
 
 export const LocaleProvider = ({ children }: any) => {

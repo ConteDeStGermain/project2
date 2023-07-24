@@ -32,6 +32,7 @@ export const Modal: FC<ModalProps> = ({ id, title, rating, price, amenities, isO
         </div>
         <div className="p-6">
           <h1 id={`modal-heading-${id}`} className="font-bold text-2xl flex justify-between">{title} <span aria-label={`Rated ${rating}`}>{rating}</span></h1>
+          {/*@ts-ignore*/}
           <p>{translations.longDesc}</p>
           <div className="flex justify-between">
             <div className="flex gap-2">

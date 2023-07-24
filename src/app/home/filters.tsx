@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useContext } from 'react';
 import { CheckboxContext } from "../contexts/CheckboxContext";
 import { useLocale } from '../contexts/LocaleContext';

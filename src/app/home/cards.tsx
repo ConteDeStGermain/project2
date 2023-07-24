@@ -32,7 +32,6 @@ const displayEmojis = (type: string, value: string | string[]): string => {
   if (Array.isArray(value)) {
     value = value.join(' ');
   }
-  // @ts-ignore
   return value.split(' ').map(v => mapping[type][v] || '').join(' ');
 }
 
@@ -48,6 +47,7 @@ export default function Cards() {
   }
   const { checkboxState, handleInputChange } = context;
 
+// @ts-nocheck
 
   const coffeeShops = [
     {
@@ -135,8 +135,7 @@ export default function Cards() {
 
   const addToFavorites = (event: React.MouseEvent, index: number) => {
     event.stopPropagation();
-    // TODO: Create a type for the coffee shops
-    // @ts-ignore 
+    // TODO: Create a type for the coffee shops 
     setFavorites((prevFavorites) => [...prevFavorites, index]);
   };
 
