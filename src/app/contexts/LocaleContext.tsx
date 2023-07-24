@@ -67,6 +67,7 @@ export const LocaleProvider = ({ children }: any) => {
   const [locale, setLocale] = useState(defaultLocale);
   
   const switchLanguage = (newLocale: string) => {
+    // @ts-ignore
     if (translations[newLocale]) {
       setLocale(newLocale);
     } else {
@@ -75,6 +76,7 @@ export const LocaleProvider = ({ children }: any) => {
   };
 
   return (
+    // @ts-ignore
     <LocaleContext.Provider value={[translations[locale], switchLanguage]}>
       {children}
     </LocaleContext.Provider>
